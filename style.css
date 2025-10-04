@@ -1,0 +1,234 @@
+*{
+    margin: 0;/*jate by default extra margin amader elements jate na pai */
+    font-family: Arial;/*actually Amazon er font-family alada set a6e oder company r theke but amra Arial likh6i,ar eta dekhteo ki6uta similar hobe*/
+    border: border-box;/*border ke jokhon border-box value deyao hoy er specific meaning thake;er mane jotogulo padding element pabe kimba jotogulo border size oi element pabe oi size or height and width er moddhe count hote hobe*/
+}
+.navbar{
+    height: 60px;
+    background-color: #0f1111;
+    color: white;
+    display: flex;
+    align-items: center;/*cross axis borabor items center e chole asbe*/
+    justify-content:space-evenly;/*sob je elements(amazon logo,deliver to india,search panel)a6e tader ke equally space debo..,jokhon aro element add hote thakbe tokhon automatically element gulo left side e move hote thakbe & protek elements gulo evenly specify thakbe*/
+}
+.nav-logo{
+    height: 50px;
+    width: 100px;
+}
+.logo{
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkSxSADHlE5N80qd2y8wc9wzbH8-sMuLUrTpDY-uzWltlKpg_7gWCiQ18cJ4pV05_64KU&usqp=CAU");
+    background-size: cover;
+    height: 50px;
+    width: 100%;
+}
+.border{
+    border: 1.5px solid transparent;
+}
+.border:hover{
+    border: 1.5px solid white;
+}
+/* box2 */
+.add-first{
+    color: #cccccc;
+    font-size: 0.85rem;
+    margin-left: 15px;/*location icon ar deliver to lekhar moddhe margin deyaor jonno...er fole deliver to lekhata right e shift holo*/
+}
+.add-second{
+    font-size: 1rem;
+    margin-left: 3px;
+}
+.add-icon{
+    display: flex;/*icon ar india ta jate aki line  e ase*/
+    align-items: center;/*heightwise location icon ta ki6uta center e asbe*/
+}
+/*box3*/
+.nav-search{
+    display: flex;
+    justify-content: space-evenly;/*All,Search Amazon,search icon jeno equally jate space hoy*/
+    background-color:pink;
+    width: 620px;
+    height: 40px;
+    border-radius: 4px;
+}
+.search-select{
+    background-color: #f3f3f3;
+    width: 50px;
+    text-align: center;/*jate All lekhata center e ase*/
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border: none;/*select er je by default border a6e seta ar thakbena jodi border:none set kora hoy*/
+}
+.search-input{
+    width: 100%;/*search Amazon er width....,jotogulo khali place a6e sob gulo jeno search input peyejai tai width deyao hoye6e 100% */
+    font-size: 1rem;/*ei font-size ta Search Amazon lekhatar*/
+    border: none;/*search e je by default border a6e ota jate na thake*/
+}
+.search-icon{
+    width: 45px;
+    display: flex;/*parent container(search-icon)ke display flex deyao hoye6e,jar moddhe icon a6e*/
+    justify-content: center;/*horizontally center hoye6e*/
+    align-items: center;
+    font-size: 1.2rem;/*search-icon er size baranor jonno*/
+    background-color: rgb(255, 174, 0);
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    color: #0f1111;
+}
+.nav-search:hover{
+
+    border: 2px solid orange;
+}
+/*box4*/
+span{
+    font-size: 0.7rem;
+}
+.nav-second{
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+/*box6*/
+.navcart i{/*amra style use korbo icon er upor jeta/jegulo na-cart class er moddhe a6e....,tai amra 1st e likhbo parent(class)name tarpor or moddhe joto icon thakbe take*/
+    font-size: 30px;
+}
+.nav-cart{
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+/*panel*/
+.panel{
+    height: 40px;
+    background-color: #222f3d;
+    display: flex;/*panel e thaka sob item guloke jodi same line(Horizontally)e shift korte hoy tobe tokhon  main container ke flex koredite hobe,er fole items gulo by default row te formate hoye jabe*/
+    color: white;
+    align-items: center;/*items guloke vertically align korar jonno use hoye6e align-items & items guloke centralize korar jonno use hoye6e center*/
+    justify-content: space-evenly;/*Horizontally allign korar jonno use hoye6e*/
+}
+.panel-ops p{/*panel er moddhe thaka sob paragraph*/
+    display: inline;/*aki line e jodi korte hoy*/
+    margin-left: 15px;/*paragraph tag er moddher items gulor maje jate gap ase */
+}
+.panel-ops{
+    width: 70%;
+    font-size: 0.85rem;
+}
+.panel-deals{
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+/*hero section*/
+.hero-section{
+    background-image: url("https://m.media-amazon.com/images/I/619geyiQI5L._SX3000_.jpg");
+    background-size: cover;/*puro image ta jate page e cover hoy ortath puro image jate page e visible hoy*/
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;/*content ta ke niche niye jabar jonno(cross axis borabor)flex-end ke use koa hoye6e*/
+}
+.hero-msg{
+    background-color: white;
+    color: black;
+    height: 40px;
+    display: flex;
+    align-items: center;/*vertically center*/
+    justify-content: center;/*Horizontally center*/
+    font-size: 0.85rem;/*text font size*/
+    width: 95%;/*hero-section e thaka align-items er width*/
+    margin-bottom: 25px;/*hero-section e thaka align-items er margin*/
+}
+.hero-msg a{
+    color: #2162A1;
+}
+
+/*shop-section*/
+.shop-section{
+    display: flex;/*aki line e jodi 4 te box ke rakhte chai tobe box er je container ortath 'shop-section' ke kora hobe display:flex */
+    flex-wrap: wrap;/*aksathe onekgulo box jodi aki line e chole ase tokhon 2 to part e vag kore debe...suppose ei khetre 8 ti box neyao hoye6e jara aki line e chole as6ilo but amra chai akta line e jeno 4 te box thake;tai flex-wrap:wrap ke use kora hoye6e...,er fole 4 te box aki line e thaklo ar baki 4 te box transfer holo automatic second line e .*/
+    justify-content: space-evenly;/*proti box er maje jokhon even space chai tokhon container ke deyao hoy justify-content: space-evenly*/
+    background-color: #cef6ec;
+    
+}
+.box{
+    /* border: 2px solid black; */
+    height: 400px;
+    width: 23%;/*box gulor majhe space komanor jonno width barano hoye6e*/
+    background-color: white;
+    padding: 20px 0px 15px;
+    margin-top: 5px;
+    
+}
+.box-img{
+    height: 300px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.box-content{
+    margin-left: 1rem;/*basically 1rem=16px(around)*/
+    margin-right: 1rem;
+}
+.box-content p{
+    color: #2162A1;
+}
+
+/*footer*/
+footer{
+    margin-top: 10px;
+}
+.foot-panel1{
+    background-color: #37475a;
+    color: white;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.85rem;
+}
+.foot-panel2{
+    background-color: #222f3d;
+    color: white;
+    height: 300px;
+    display: flex;/*list items gulo aki row te asbe*/
+    justify-content: space-evenly;/*list items gulo evenly space pabe*/
+}
+ul{
+    margin-top: 20px;
+}
+ul a {
+    display: block;/* list items gulo akta column e asbe*/
+    font-size: 0.85rem;
+    margin-top: 10px;
+    color: #dddddd;
+}
+
+.foot-panel3{
+    background-color: #222f3d;
+    color: white;
+    border-top: 0.5px solid white;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo{
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkSxSADHlE5N80qd2y8wc9wzbH8-sMuLUrTpDY-uzWltlKpg_7gWCiQ18cJ4pV05_64KU&usqp=CAU");
+    background-size: cover;
+    height: 50px;
+    width: 100px;
+}
+
+.foot-panel4{
+    background-color: #0f1111;
+    color: white;
+    height: 100px;
+    font-size: 0.7rem;
+    text-align: center;
+}
+
+.pages{
+    padding-top: 25px;
+}
+.copyright{
+    text-align: center;
+}
