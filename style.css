@@ -1,234 +1,424 @@
-*{
-    margin: 0;/*jate by default extra margin amader elements jate na pai */
-    font-family: Arial;/*actually Amazon er font-family alada set a6e oder company r theke but amra Arial likh6i,ar eta dekhteo ki6uta similar hobe*/
-    border: border-box;/*border ke jokhon border-box value deyao hoy er specific meaning thake;er mane jotogulo padding element pabe kimba jotogulo border size oi element pabe oi size or height and width er moddhe count hote hobe*/
+/* ======================= General Styles & Fonts ======================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Amazon Ember', Arial, sans-serif;
 }
-.navbar{
+
+body {
+    background-color: #E3E6E6;
+}
+
+.border {
+    border: 1.5px solid transparent;
+    padding: 3px;
+    cursor: pointer;
+}
+
+.border:hover {
+    border: 1.5px solid white;
+    border-radius: 3px;
+}
+
+/* ======================= Header - Top Navigation Bar ======================= */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar {
     height: 60px;
-    background-color: #0f1111;
+    background-color: #131921;
     color: white;
     display: flex;
-    align-items: center;/*cross axis borabor items center e chole asbe*/
-    justify-content:space-evenly;/*sob je elements(amazon logo,deliver to india,search panel)a6e tader ke equally space debo..,jokhon aro element add hote thakbe tokhon automatically element gulo left side e move hote thakbe & protek elements gulo evenly specify thakbe*/
+    align-items: center;
+    justify-content: space-evenly;
 }
-.nav-logo{
+
+.nav-logo {
     height: 50px;
     width: 100px;
-}
-.logo{
-    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkSxSADHlE5N80qd2y8wc9wzbH8-sMuLUrTpDY-uzWltlKpg_7gWCiQ18cJ4pV05_64KU&usqp=CAU");
-    background-size: cover;
-    height: 50px;
-    width: 100%;
-}
-.border{
-    border: 1.5px solid transparent;
-}
-.border:hover{
-    border: 1.5px solid white;
-}
-/* box2 */
-.add-first{
-    color: #cccccc;
-    font-size: 0.85rem;
-    margin-left: 15px;/*location icon ar deliver to lekhar moddhe margin deyaor jonno...er fole deliver to lekhata right e shift holo*/
-}
-.add-second{
-    font-size: 1rem;
-    margin-left: 3px;
-}
-.add-icon{
-    display: flex;/*icon ar india ta jate aki line  e ase*/
-    align-items: center;/*heightwise location icon ta ki6uta center e asbe*/
-}
-/*box3*/
-.nav-search{
     display: flex;
-    justify-content: space-evenly;/*All,Search Amazon,search icon jeno equally jate space hoy*/
-    background-color:pink;
+    align-items: center;
+}
+
+.nav-logo img {
+    width: 100%;
+    height: auto;
+}
+
+/* --- Address Section --- */
+.nav-address {
+    padding: 5px;
+}
+
+.add-first {
+    color: #CCCCCC;
+    font-size: 0.8rem;
+    margin-left: 15px;
+}
+
+.add-second {
+    font-size: 0.9rem;
+    margin-left: 3px;
+    font-weight: 700;
+}
+
+.add-icon {
+    display: flex;
+    align-items: center;
+}
+
+/* --- Search Bar --- */
+.nav-search {
+    display: flex;
+    justify-content: space-evenly;
     width: 620px;
     height: 40px;
     border-radius: 4px;
+    overflow: hidden; /* Ensures children conform to border-radius */
 }
-.search-select{
+
+.nav-search:hover {
+    outline: 2px solid #febd68;
+}
+
+.search-select {
     background-color: #f3f3f3;
     width: 50px;
-    text-align: center;/*jate All lekhata center e ase*/
-    border-top-left-radius: 4px;
-    border-bottom-left-radius: 4px;
-    border: none;/*select er je by default border a6e seta ar thakbena jodi border:none set kora hoy*/
+    text-align: center;
+    border: none;
+    font-size: 0.8rem;
 }
-.search-input{
-    width: 100%;/*search Amazon er width....,jotogulo khali place a6e sob gulo jeno search input peyejai tai width deyao hoye6e 100% */
-    font-size: 1rem;/*ei font-size ta Search Amazon lekhatar*/
-    border: none;/*search e je by default border a6e ota jate na thake*/
-}
-.search-icon{
-    width: 45px;
-    display: flex;/*parent container(search-icon)ke display flex deyao hoye6e,jar moddhe icon a6e*/
-    justify-content: center;/*horizontally center hoye6e*/
-    align-items: center;
-    font-size: 1.2rem;/*search-icon er size baranor jonno*/
-    background-color: rgb(255, 174, 0);
-    border-top-right-radius: 4px;
-    border-bottom-right-radius: 4px;
-    color: #0f1111;
-}
-.nav-search:hover{
 
-    border: 2px solid orange;
+.search-input {
+    width: 100%;
+    font-size: 1rem;
+    border: none;
+    padding-left: 10px;
+    outline: none;
 }
-/*box4*/
-span{
-    font-size: 0.7rem;
+
+.search-icon {
+    width: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    background-color: #febd68;
+    color: #131921;
+    cursor: pointer;
 }
-.nav-second{
-    font-size: 0.85rem;
+
+/* --- Other Nav Items --- */
+.nav-language {
+    display: flex;
+    align-items: center;
+    gap: 3px;
     font-weight: 700;
 }
-/*box6*/
-.navcart i{/*amra style use korbo icon er upor jeta/jegulo na-cart class er moddhe a6e....,tai amra 1st e likhbo parent(class)name tarpor or moddhe joto icon thakbe take*/
-    font-size: 30px;
+
+.nav-language .fa-caret-down {
+    font-size: 0.8rem;
 }
-.nav-cart{
-    font-size: 0.85rem;
-    font-weight: 700;
+
+.nav-signin span, .nav-return span {
+    font-size: 0.75rem;
 }
-/*panel*/
-.panel{
-    height: 40px;
-    background-color: #222f3d;
-    display: flex;/*panel e thaka sob item guloke jodi same line(Horizontally)e shift korte hoy tobe tokhon  main container ke flex koredite hobe,er fole items gulo by default row te formate hoye jabe*/
-    color: white;
-    align-items: center;/*items guloke vertically align korar jonno use hoye6e align-items & items guloke centralize korar jonno use hoye6e center*/
-    justify-content: space-evenly;/*Horizontally allign korar jonno use hoye6e*/
-}
-.panel-ops p{/*panel er moddhe thaka sob paragraph*/
-    display: inline;/*aki line e jodi korte hoy*/
-    margin-left: 15px;/*paragraph tag er moddher items gulor maje jate gap ase */
-}
-.panel-ops{
-    width: 70%;
-    font-size: 0.85rem;
-}
-.panel-deals{
+
+.nav-second {
     font-size: 0.9rem;
     font-weight: 700;
 }
 
-/*hero section*/
-.hero-section{
-    background-image: url("https://m.media-amazon.com/images/I/619geyiQI5L._SX3000_.jpg");
-    background-size: cover;/*puro image ta jate page e cover hoy ortath puro image jate page e visible hoy*/
-    height: 400px;
+.nav-cart {
     display: flex;
-    justify-content: center;
-    align-items: flex-end;/*content ta ke niche niye jabar jonno(cross axis borabor)flex-end ke use koa hoye6e*/
+    align-items: center;
+    font-size: 0.9rem;
+    font-weight: 700;
 }
-.hero-msg{
-    background-color: white;
-    color: black;
+
+.nav-cart i {
+    font-size: 1.5rem;
+    margin-right: 5px;
+}
+
+
+/* ======================= Header - Bottom Panel ======================= */
+.panel {
     height: 40px;
+    background-color: #232f3e;
     display: flex;
-    align-items: center;/*vertically center*/
-    justify-content: center;/*Horizontally center*/
-    font-size: 0.85rem;/*text font size*/
-    width: 95%;/*hero-section e thaka align-items er width*/
-    margin-bottom: 25px;/*hero-section e thaka align-items er margin*/
-}
-.hero-msg a{
-    color: #2162A1;
-}
-
-/*shop-section*/
-.shop-section{
-    display: flex;/*aki line e jodi 4 te box ke rakhte chai tobe box er je container ortath 'shop-section' ke kora hobe display:flex */
-    flex-wrap: wrap;/*aksathe onekgulo box jodi aki line e chole ase tokhon 2 to part e vag kore debe...suppose ei khetre 8 ti box neyao hoye6e jara aki line e chole as6ilo but amra chai akta line e jeno 4 te box thake;tai flex-wrap:wrap ke use kora hoye6e...,er fole 4 te box aki line e thaklo ar baki 4 te box transfer holo automatic second line e .*/
-    justify-content: space-evenly;/*proti box er maje jokhon even space chai tokhon container ke deyao hoy justify-content: space-evenly*/
-    background-color: #cef6ec;
-    
-}
-.box{
-    /* border: 2px solid black; */
-    height: 400px;
-    width: 23%;/*box gulor majhe space komanor jonno width barano hoye6e*/
-    background-color: white;
-    padding: 20px 0px 15px;
-    margin-top: 5px;
-    
-}
-.box-img{
-    height: 300px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-}
-.box-content{
-    margin-left: 1rem;/*basically 1rem=16px(around)*/
-    margin-right: 1rem;
-}
-.box-content p{
-    color: #2162A1;
-}
-
-/*footer*/
-footer{
-    margin-top: 10px;
-}
-.foot-panel1{
-    background-color: #37475a;
     color: white;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 10px;
+}
+
+.panel-ops p {
+    display: inline-block;
+    margin-left: 15px;
+    padding: 8px;
+}
+
+.panel-all {
+    font-weight: 700;
+}
+
+.panel-deals {
+    font-weight: 700;
+    margin-left: auto; /* Pushes to the right */
+    padding-right: 20px;
+}
+
+/* ======================= Hero Section Slider ======================= */
+.hero-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-slider-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.hero-slide {
+    min-width: 100%;
+}
+
+.hero-slide img {
+    width: 100%;
+    height: auto;
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 70%, rgba(0,0,0,0) 100%);
+}
+
+.slider-btn {
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    color: #131921;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 20px 10px;
+}
+
+.prev-btn {
+    left: 20px;
+}
+
+.next-btn {
+    right: 20px;
+}
+
+/* ======================= Main Content - Product Grids ======================= */
+.main-content {
+    padding: 20px;
+    margin-top: -300px; /* Adjust to pull content up over the hero image */
+    position: relative;
+    z-index: 10;
+}
+
+.shop-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.box {
+    background-color: white;
+    padding: 20px;
+}
+
+.box h2 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+}
+
+.box-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.grid-item {
+    font-size: 0.8rem;
+}
+
+.grid-item img {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    margin-bottom: 5px;
+}
+
+.box-single-img img {
+    width: 100%;
+    height: auto;
+}
+
+.box-link {
+    display: inline-block;
+    margin-top: 15px;
+    color: #007185;
+    font-size: 0.9rem;
+    text-decoration: none;
+}
+
+.box-link:hover {
+    color: #C7511F;
+    text-decoration: underline;
+}
+
+.signin-btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 0.9rem;
+    background-color: #FFD814;
+    border: 1px solid #FCD200;
+    border-radius: 8px;
+    text-align: center;
+    text-decoration: none;
+    color: #0F1111;
+    cursor: pointer;
+}
+
+/* ======================= Product Carousel Section ======================= */
+.product-carousel-section {
+    background-color: white;
+    margin: 20px;
+    padding: 20px;
+}
+
+.product-carousel-section h2 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.product-carousel {
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel-track {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scrollbar-width: none; /* For Firefox */
+}
+
+.carousel-track::-webkit-scrollbar {
+    display: none; /* For Chrome, Safari, and Opera */
+}
+
+.product-card img {
+    width: 160px;
+    height: auto;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    width: 40px;
+    height: 80px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.prev-carousel-btn {
+    left: 0;
+}
+
+.next-carousel-btn {
+    right: 0;
+}
+
+/* ======================= Footer ======================= */
+footer {
+    color: white;
+    margin-top: 20px;
+}
+
+.foot-panel1 {
+    background-color: #37475A;
     height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 0.85rem;
-}
-.foot-panel2{
-    background-color: #222f3d;
-    color: white;
-    height: 300px;
-    display: flex;/*list items gulo aki row te asbe*/
-    justify-content: space-evenly;/*list items gulo evenly space pabe*/
-}
-ul{
-    margin-top: 20px;
-}
-ul a {
-    display: block;/* list items gulo akta column e asbe*/
-    font-size: 0.85rem;
-    margin-top: 10px;
-    color: #dddddd;
+    font-size: 0.9rem;
+    cursor: pointer;
 }
 
-.foot-panel3{
-    background-color: #222f3d;
-    color: white;
-    border-top: 0.5px solid white;
+.foot-panel1:hover {
+    background-color: #485769;
+}
+
+.foot-panel2 {
+    background-color: #232F3E;
+    padding: 40px 0;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.foot-panel2 ul {
+    list-style: none;
+}
+
+.foot-panel2 p {
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.foot-panel2 a {
+    display: block;
+    color: #DDDDDD;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+    text-decoration: none;
+}
+
+.foot-panel2 a:hover {
+    text-decoration: underline;
+}
+
+.foot-panel3 {
+    background-color: #232F3E;
+    border-top: 0.5px solid #3a4553;
     height: 70px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.logo{
-    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkSxSADHlE5N80qd2y8wc9wzbH8-sMuLUrTpDY-uzWltlKpg_7gWCiQ18cJ4pV05_64KU&usqp=CAU");
-    background-size: cover;
-    height: 50px;
+
+.foot-panel3 .logo img {
     width: 100px;
 }
 
-.foot-panel4{
-    background-color: #0f1111;
-    color: white;
-    height: 100px;
-    font-size: 0.7rem;
+.foot-panel4 {
+    background-color: #131921;
+    padding: 25px 0;
     text-align: center;
+    font-size: 0.8rem;
 }
 
-.pages{
-    padding-top: 25px;
+.footer-bottom-text p {
+    margin-bottom: 5px;
 }
-.copyright{
-    text-align: center;
+
+.disclaimer {
+    margin-top: 20px;
+    padding: 0 15%;
+    font-size: 0.75rem;
+    color: #DDDDDD;
+    line-height: 1.5;
 }
